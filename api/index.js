@@ -6,6 +6,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 const port = process.env.PORT || 3000
+app.use('/orders', OrdersRoutes);
 
 app.get('*', (req, res) => res.status(200).send({
     message: 'Esta é a API da nossa livraria.'
