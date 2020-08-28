@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     client: DataTypes.STRING,
     table: DataTypes.INTEGER
   }, {});
-  orders.associate = function(models) {
+  orders.associate = function (models) {
     // associations can be defined here
   };
   return orders;
