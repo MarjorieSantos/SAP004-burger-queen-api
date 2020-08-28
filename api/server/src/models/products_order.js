@@ -1,16 +1,15 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const products_order = sequelize.define('products_order', {
-    menu: DataTypes.INTEGER,
     name: DataTypes.STRING,
-    qntd: DataTypes.INTEGER,
-    orders_id: DataTypes.INTEGER,
-    request_id: DataTypes.INTEGER
+    count: DataTypes.INTEGER,
+    product_id: DataTypes.INTEGER,
+    price: DataTypes.INTEGER,
+    isBurger: DataTypes.BOOLEAN,
+    option: DataTypes.BOOLEAN
   }, {});
-  products_order.associate = function (models) {
-    menu.hasMany(models.products_order);
-    products_order.belongsTo(models.requests)
-    products_order.belongsTo(models.orders)
+  products_order.associate = function(models) {
+    // associations can be defined here
   };
   return products_order;
 };

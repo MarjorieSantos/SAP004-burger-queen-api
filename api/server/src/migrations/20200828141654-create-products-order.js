@@ -30,6 +30,17 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      menuId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'orders', key: 'id' }
+      },
+
+      orderId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'requests', key: 'id' }
       }
     });
   },
