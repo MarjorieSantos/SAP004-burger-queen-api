@@ -1,12 +1,12 @@
 import { Router } from 'express'
-import OrderController from '../controllers/ordersController'
+import RequestsController from '../controllers/requestsController'
 
 const router = Router()
-router.get('/', OrderController.all)
-router.post('/', OrderController.add)
-router.get('/:id', OrderController.getById)
-router.put('/:id', OrderController.all)
-router.delete('/:id', OrderController.all)
-router.get('/:id/items', OrderController.getItemsById)
-router.post('/:id/items', OrderController.createItem)
+router.get('/', RequestsController.all)
+router.post('/', RequestsController.add)
+router.get('/:id', RequestsController.getById)
+router.put('/:id', RequestsController.all)
+router.delete('/:id', RequestsController.all)
+router.get('/:id/items', RequestsController.getItemsById)
+router.post('/:id/items', RequestsController.createItem)
 export default router
