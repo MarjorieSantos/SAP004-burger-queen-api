@@ -1,12 +1,13 @@
 import express from 'express'
 import bodyParser from 'body-parser'
+import orderRoutes from './server/src/routes/orderRoutes'
 
 const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 const port = process.env.PORT || 3000
-app.use('/orders', OrdersRoutes);
+app.use('/orders', orderRoutes);
 
 app.get('*', (req, res) => res.status(200).send({
     message: 'Esta é a API da nossa livraria.'

@@ -22,13 +22,13 @@ module.exports = {
       menuId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'menus', key: 'id' }
+        references: { model: 'orders', key: 'id' }
       },
 
       orderId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'orders', key: 'id' }
+        references: { model: 'requests', key: 'id' }
       }
     });
   },
